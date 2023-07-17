@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply text-[10px];
+    @apply font-sans;
+    @apply box-border;
+    @apply outline-1;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: gray;
+  }
+  *::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+  *::webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+    display: none;
+  }
+  *:hover::webkit-scrollbar {
+    display: block;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .flexRow {
+    @apply flex flex-row justify-center items-center;
+  }
+  .flexCol {
+    @apply flex flex-col justify-center items-center;
+  }
+  .transition-all-300 {
+    transition: all 300ms ease-in-out;
+  }
+  .transition-all-150 {
+    transition: all 150ms ease-in-out;
+  }
+  .webkit-box-none {
+    -webkit-box-shadow: 0 0 0 100rem white inset;
+    box-shadow: 0 0 0 100rem white inset;
+  }
+  .op-50 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .op-100 {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .box-shadow-s {
+    box-shadow: 0rem 0rem 2rem 0.2rem rgba(0, 0, 0, 0.05);
+  }
+  .box-shadow-m {
+    box-shadow: 0rem 0rem 2.5rem 0.3rem rgba(0, 0, 0, 0.1);
+  }
+  .box-shadow-l {
+    box-shadow: 0rem 0rem 3rem 0.5rem rgba(0, 0, 0, 0.13);
+  }
+  .box-shadow-xl {
+    box-shadow: 0rem 0rem 5rem 1rem rgba(0, 0, 0, 0.15);
+  }
 }

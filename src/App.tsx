@@ -1,7 +1,11 @@
-import './App.css';
+import LoginPage from './views/LoginPage';
 
 function App() {
-  return <div className='App'></div>;
+  return (
+    <>
+      <LoginPage />
+    </>
+  );
 }
 
 export default App;
