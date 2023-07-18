@@ -15,10 +15,10 @@ const JoinPage: React.FC = (): JSX.Element => {
   return (
     <>
       <section className='w-screen h-screen flexCol bg-gray-300'>
-        <article className='w-40vw h-70vh flex items-center border rounded-lg border-gray-500'>
+        <article className='w-50vw h-70vh flex items-center border rounded-lg border-gray-500'>
           <i className='LoginImage w-1/2 h-full' />
           <div className='w-1/2 h-full flex-col items-center justify-center flex relative p-4rem'>
-            <i className='xi-long-arrow-left' onClick={handleClickLoginPage} />
+            <i className='xi-long-arrow-left xi-3x absolute top-10 left-10 hover:text-white cursor-pointer' onClick={handleClickLoginPage} />
             <h2 className='text-[1.7rem] w-full font-bold tracking-widest mb-5rem text-center'>Join</h2>
             <EmailInput labelText='이메일' htmlFor='loginEmail' placeholder='이메일을 입력해주세요.' disabled={false} readonly={false} confirmExist={false} value={emailValue} setValue={setEmailValue} purpose='login' />
             <PasswordInput labelText='비밀번호' htmlFor='loginPassword' placeholder='비밀번호를 입력해주세요.' disabled={false} readonly={false} value={passwordValue} setValue={setPasswordValue} purpose={'login'} />
