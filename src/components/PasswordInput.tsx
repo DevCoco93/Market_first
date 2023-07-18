@@ -24,18 +24,7 @@ const PasswordInput: React.FC<PropsType> = ({ labelText, htmlFor, placeholder, d
             {labelText}
           </label>
           <div className='w-full relative'>
-            <input
-              className='h-5rem text-[1.6rem] w-full mb-3.7rem border-b-0.1rem border-solid border-gray-500 transition-all duration-300 ease-in-out 
-box-shadow: inset 0 0 0 100rem white -webkit-box-shadow: inset 0 0 0 100rem white'
-              id={htmlFor}
-              placeholder={placeholder}
-              minLength={8}
-              maxLength={100}
-              disabled={disabled}
-              readOnly={readonly}
-              value={value}
-              onChange={handleChangeInputPassword}
-            />
+            <input className='bg-gray-300 h-5rem text-[1.6rem] w-full mb-3.7rem border-b-0.1rem border-solid border-gray-500 transition-all duration-300 ease-in-out focus:outline-none focus:border-b-0.1rem focus:border-gray-200 hover:border-gray-200' id={htmlFor} placeholder={placeholder} minLength={8} maxLength={100} disabled={disabled} readOnly={readonly} value={value} onChange={handleChangeInputPassword} />
           </div>
         </div>
       </If>

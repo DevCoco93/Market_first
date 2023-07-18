@@ -47,7 +47,7 @@ module.exports = {
       inputColor: '#333',
     }),
     fontFamily: {
-      sans: ['Noto Sans KR', 'sans-serif'],
+      sans: ['PT Sans Narrow', 'sans-serif'],
     },
     minWidth: {
       '0rem': '0rem',
