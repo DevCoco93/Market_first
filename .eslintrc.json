@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "env": { "browser": true, "node": true },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": ["react-app", "react-app/jest", "eslint:recommended", "plugin:prettier/recommended", "prettier"],
+  "globals": { "JSX": true, "React": true },
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-unused-vars": "warn",
+    "react/no-unescaped-entities": 0,
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-case-declarations": "off",
+    "no-useless-escape": "off",
+    "prettier/prettier": ["error", { "singleQuote": true, "parser": "typescript", "endOfLine": "auto" }]
+  },
+  "settings": {
+    "import/resolver": { "node": { "moduleDirectory": ["node_modules", "src"] } }
+  },
+  "plugins": ["prettier"]
+}
